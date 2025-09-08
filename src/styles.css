@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+     --fonte: "Raleway", sans-serif;
+     --cor-fonte: #000000;
+     --cor-fonte-destaque: #1548a8;
+     --cor-fundo: #9fadfd;
+     --cor-destaque: #2e1ae4;
+}
+body{
+    background-color:  var(--cor-fundo);
+}

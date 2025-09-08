@@ -1,0 +1,27 @@
+
+.navbar {
+  font-family: var(--fonte);
+  border-bottom: solid 2px var(--cor-destaque);
+}
+.navbar-brand h2 {
+  color: var(--cor-fonte-destaque);
+  font-weight: 700;
+}
+/* .navbar-brand{
+  display: flex;
+  flex-direction: column;
+} */
+.nav-link {
+  color: var(--cor-fonte) ;
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-inline: 0.5rem;
+}
+.nav-link:hover {
+  color: var(--cor-fonte-destaque) ;
+}
+.header-icon {
+  margin-inline: 0.2rem;
+  color: var(--cor-fonte-destaque);
+
+}
