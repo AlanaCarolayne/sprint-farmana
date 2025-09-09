@@ -1,0 +1,30 @@
+.side {
+  border-left: solid 2px var(--cor-destaque);
+  padding: 1rem;
+  max-width: 400px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  align-items: center;
+}
+.side::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--cor-destaque), var(--cor-fundo));
+  opacity: 0.1;
+}
+h2 {
+  color: var(--cor-fonte-destaque);
+  font-weight: 700;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid rgba(66, 89, 223, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}

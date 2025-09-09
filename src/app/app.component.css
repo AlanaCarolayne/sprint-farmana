@@ -3,7 +3,7 @@
 :root{
      --fonte: "Raleway", sans-serif;
      --cor-fonte: #000000;
-     --cor-fonte-destaque: #1548a8;
-     --cor-fundo: #4259df;
-     --cor-destaque: #2e1ae4;
+     --cor-fonte-destaque:#00358E;
+     --cor-fundo: #D9D9D9;
+     --cor-destaque: #00358E8A;
 }

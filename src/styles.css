@@ -3,10 +3,15 @@
 :root{
      --fonte: "Raleway", sans-serif;
      --cor-fonte: #000000;
-     --cor-fonte-destaque: #1548a8;
-     --cor-fundo: #9fadfd;
-     --cor-destaque: #2e1ae4;
+     --cor-fonte-destaque: #00358E;
+     --cor-fundo: #cfd6fd;
+     --cor-destaque: #1303a3;
 }
 body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
     background-color:  var(--cor-fundo);
+   
 }

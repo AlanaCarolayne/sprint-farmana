@@ -1,0 +1,71 @@
+:root {
+  --fonte: "Raleway", sans-serif;
+  --cor-fonte: #000000;
+  --cor-fonte-destaque: #00358E;
+  --cor-fundo: #D9D9D9;
+  --cor-destaque: #00358E8A;
+}
+
+body {
+  font-family: var(--fonte);
+  background-color: var(--cor-fundo);
+}
+.label{
+      font-size: 1.3rem;
+      font-weight: 500;
+}
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.button-login{
+  border-radius: 50px;
+  border: 1px solid var(--cor-destaque);
+  background-color: var(--cor-destaque);
+  color: #D9D9D9;
+  font-weight: 600;
+  padding: .5rem 3rem ;
+  font-size: 1.4rem;
+}
+.button-login:hover{
+    background-color: transparent;
+    border: 3px solid var(--cor-destaque);
+    color: var(--cor-fonte-destaque);
+    transition: .5s;
+
+}
+.login-box {
+  background: transparent;
+}
+
+.custom-input {
+  border-radius: 50px;
+  border: 1px solid var(--cor-destaque);
+  padding: .5rem;
+  color:var(--cor-fonte);
+}
+
+.custom-input::placeholder {
+  color: var(--cor-fonte-destaque);
+}
+
+a {
+  display: block;
+  font-size: 1.2rem;
+  color: var(--cor-fonte);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--cor-fonte-destaque);
+
+}
+
+h2 {
+  font-weight: bold;
+  color: var(--cor-fonte-destaque);
+}

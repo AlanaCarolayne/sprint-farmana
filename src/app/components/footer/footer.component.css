@@ -4,6 +4,7 @@
     background-color: var(--bg-dark);
     padding: 0.8rem 0;
     margin-top: auto;
+    
 }
 
 .footer-nav {
@@ -26,13 +27,14 @@
 .footer-link {
     color: var(--cor-fonte);
     font-weight: 600;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     text-decoration: none;
     display: flex;
     align-items: center;
     padding: 0.5rem 0.8rem;
     border-radius: 0.5rem;
     transition: all 0.3s ease;
+   
 }
 
 .footer-link:hover {
@@ -43,7 +45,7 @@
 .footer-icon {
     margin-inline: 0.3rem;
     color: var(--cor-fonte-destaque);
-    font-size: 1.3rem;
+    font-size: 1.7rem;
 }
 
 /* Responsividade */
