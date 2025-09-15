@@ -1,16 +1,16 @@
-
-<div class="main-container container">
-    <div class="row">
-        <div class="col-lg-8">
-            <app-card />
-           
-           
-        </div>
-        <div class="col-lg-4">
-
-            <app-side-container />
-        </div>
+<div class="main-container container p-3 ">
+  <div class="row g-4">
+    <div class="col-lg-4 col-md-12">
+      <app-card></app-card>
     </div>
-    
 
+    <div class="col-lg-4 col-md-12 d-flex flex-column">
+      <app-card-horizontal></app-card-horizontal>
+      <app-card-horizontal></app-card-horizontal>
+    </div>
+
+    <div class="col-lg-4 col-md-12">
+      <app-side-container></app-side-container>
+    </div>
+  </div>
 </div>

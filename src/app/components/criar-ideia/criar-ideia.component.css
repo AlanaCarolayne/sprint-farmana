@@ -1,0 +1,28 @@
+
+
+.form-ideia {
+    border: 2.5px solid var(--cor-destaque);
+    background-color: #e9ecef; 
+}
+
+
+.form-label {
+    font-family: var(--fonte-destaque);
+    color: var(--cor-fonte-destaque);
+    font-size: 1.3rem;
+}
+
+
+.form-control {
+    border: 2.5px solid var(--cor-destaque);
+    border-radius: .75rem;
+}
+
+.btn-outline-primary {
+    border-color: var(--cor-destaque);
+    color: var(--cor-destaque);
+}
+.btn-outline-primary:hover {
+    background-color: var(--cor-destaque);
+    color: #fff;
+}

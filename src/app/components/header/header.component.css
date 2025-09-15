@@ -7,14 +7,15 @@
   color: var(--cor-fonte-destaque);
   font-weight: 700;
 }
-/* .navbar-brand{
+.navbar-brand{
   display: flex;
-  flex-direction: column;
-} */
+align-items: center;
+justify-content: center;
+}
 .nav-link {
   color: var(--cor-fonte) ;
   font-weight: 600;
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   margin-inline: 0.5rem;
 }
 .nav-link:hover {
@@ -23,5 +24,7 @@
 .header-icon {
   margin-inline: 0.2rem;
   color: var(--cor-fonte-destaque);
+  font-size: 1.6rem;
+  
 
 }

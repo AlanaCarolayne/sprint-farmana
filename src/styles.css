@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 :root{
      --fonte: "Raleway", sans-serif;
+     --fonte-destaque: "Baloo Bhaijaan 2";
      --cor-fonte: #000000;
      --cor-fonte-destaque: #00358E;
      --cor-fundo: #cfd6fd;
@@ -14,4 +15,8 @@ body{
     height: auto;
     background-color:  var(--cor-fundo);
    
+}
+.title-farmana{
+    font-family: var(--fonte-destaque);
+    color: var(--cor-fonte-destaque);
 }

@@ -1,0 +1,23 @@
+.btn-outline-primary {
+  border-color: var(--cor-destaque);
+  color: var(--cor-destaque);
+}
+.btn-outline-primary:hover {
+  background-color: var(--cor-destaque);
+  color: #fff;
+}
+
+.post {
+  background-color: #f8f9fa;
+  border: 2px solid var(--cor-destaque);
+  border-radius: 1rem;
+}
+
+
+.post h5 {
+  font-family: var(--fonte-destaque);
+  color: var(--cor-fonte-destaque);
+}
+.card-post{
+    border: 2.5px solid var(--cor-destaque);
+}

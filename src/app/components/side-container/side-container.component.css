@@ -2,21 +2,12 @@
   border-left: solid 2px var(--cor-destaque);
   padding: 1rem;
   max-width: 400px;
-  margin: 0 auto;
+  margin: 0 10rem;
   position: relative;
   overflow: hidden;
   align-items: center;
 }
-.side::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 3px;
-  height: 100%;
-  background: linear-gradient(to bottom, var(--cor-destaque), var(--cor-fundo));
-  opacity: 0.1;
-}
+
 h2 {
   color: var(--cor-fonte-destaque);
   font-weight: 700;
