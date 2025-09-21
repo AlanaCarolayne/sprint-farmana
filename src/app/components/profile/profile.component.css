@@ -1,0 +1,37 @@
+.profile-container {
+  font-family: var(--fonte);
+  color: var(--cor-fonte);
+}
+
+.left-panel {
+  border-right: 2px solid var(--cor-destaque);
+  padding-right: 1rem;
+}
+
+.profile-icon {
+  font-size: 5rem;
+  color: var(--cor-destaque);
+}
+
+.additional-info p {
+  margin: 0.3rem 0;
+  font-size: 0.95rem;
+}
+
+.right-panel {
+  padding-left: 2rem;
+}
+
+.medal-icon {
+  font-size: 2rem;
+  color: var(--cor-destaque);
+}
+
+.idea-post {
+  border: 2px solid var(--cor-destaque);
+  background-color: #fff;
+}
+
+.idea-post i {
+  color: var(--cor-destaque);
+}

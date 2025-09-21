@@ -1,9 +1,13 @@
+
+@if (item.tipo ==='horizontal'){
 <div class="custom-card horizontal-card">
   <div class="img-container">
-    <img src="https://st4.depositphotos.com/9998432/24359/v/450/depositphotos_243599048-stock-illustration-person-gray-photo-placeholder-girl.jpg" alt="Avatar" />
+    <img src={{item.imagem}} alt="Avatar" />
   </div>
   <div class="content">
-    <h3 class="card-title">Título</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est error ipsum placeat quasi dolorum labore.</p>
+    <h3 class="card-title">{{item.titulo}}</h3>
+    <small>{{item.dataHora}}</small>
+    <p>{{item.descricao}}</p>
   </div>
 </div>
+}

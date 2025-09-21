@@ -1,0 +1,107 @@
+{
+  "card": [
+    {
+      "id": "abc",
+      "titulo": "Teste-treinamento",
+      "descricao": "lorem ipsum",
+      "imagem": "https://static.vecteezy.com/system/resources/thumbnails/008/695/917/small_2x/no-image-available-icon-simple-two-colors-template-for-no-image-or-picture-coming-soon-and-placeholder-illustration-isolated-on-white-background-vector.jpg",
+      "dataHora": "20/09/2025",
+      "tipo": "treinamento"
+    },
+    {
+      "id": "ab",
+      "titulo": "Teste-vertical",
+      "descricao": "lorem ipsum",
+      "imagem": "https://static.vecteezy.com/system/resources/thumbnails/008/695/917/small_2x/no-image-available-icon-simple-two-colors-template-for-no-image-or-picture-coming-soon-and-placeholder-illustration-isolated-on-white-background-vector.jpg",
+      "dataHora": "20/09/2025",
+      "tipo": "vertical"
+    },
+    {
+      "id": "a",
+      "titulo": "Teste-horizontal",
+      "descricao": "lorem ipsum",
+      "imagem": "https://static.vecteezy.com/system/resources/thumbnails/008/695/917/small_2x/no-image-available-icon-simple-two-colors-template-for-no-image-or-picture-coming-soon-and-placeholder-illustration-isolated-on-white-background-vector.jpg",
+      "dataHora": "20/09/2025",
+      "tipo": "horizontal"
+    }
+  ],
+  "criaIdeia": [
+    {
+      "id": "ideia1",
+      "titulo": "Sistema de Reuso de Água",
+      "descricao": "Proposta para instalar um sistema de captação e reuso de água da chuva na fábrica, visando redução de custos e sustentabilidade.",
+      "imagem": "https://images.unsplash.com/photo-1502303756788-9c6a119f1e83",
+      "areaAfetada": "Infraestrutura",
+      "tipo": "Sustentabilidade",
+      "dataHora": "20/09/2025",
+      "recursos": "Cisternas, filtros, encanamento",
+      "idColaborador": "colab789",
+      "likes": 32,
+      "comments": 37,
+      "share": 5
+    },
+    {
+      "id": "ideia2",
+      "titulo": "App Interno de Feedback",
+      "descricao": "Aplicativo mobile para coleta de feedback em tempo real entre colaboradores e gestores, visando melhoria contínua do ambiente de trabalho.",
+      "imagem": "https://images.unsplash.com/photo-1547658718-1f1ab7b8b70e",
+      "areaAfetada": "Recursos Humanos",
+      "tipo": "Inovação",
+      "dataHora": "20/09/2025",
+      "recursos": "Equipe de desenvolvimento, servidor interno",
+      "idColaborador": "colab123",
+      "likes": 263,
+      "comments": 39,
+      "share": 5
+    }
+  ],
+  "colaboradores": [
+    {
+      "id": "colab123",
+      "nome": "Ana Silva",
+      "departamento": "Infraestrutura",
+      "email": "ana.silva@empresa.com",
+      "foto": "https://randomuser.me/api/portraits/women/1.jpg",
+      "tempo": 5,
+      "area": "Gestão de Projetos",
+      "cargo": "Engenheira",
+      "unidade": "São Paulo",
+      "pontos": "100"
+    },
+    {
+      "id": "colab789",
+      "nome": "Carla Mendes",
+      "departamento": "TI",
+      "email": "carla.mendes@empresa.com",
+      "foto": "https://randomuser.me/api/portraits/women/3.jpg",
+      "tempo": 4,
+      "area": "Desenvolvimento de Sistemas",
+      "cargo": "Desenvolvedora",
+      "unidade": "Belo Horizonte",
+      "pontos": "10"
+    }
+  ],
+  "newsletter": [
+    {
+      "id": "aaa",
+      "titulo": "Sustentabilidade na Prática",
+      "descricao": "Incentivar colaboradores a propor soluções práticas para:",
+      "itens": [
+        "Reduzir desperdícios (papel, energia, água, insumos)",
+        "Otimizar processos com menor impacto ambiental",
+        "Promover hábitos sustentáveis no dia a dia"
+      ],
+      "imagem": "https://static.vecteezy.com/system/resources/thumbnails/008/695/917/small_2x/no-image-available-icon-simple-two-colors-template-for-no-image-or-picture-coming-soon-and-placeholder-illustration-isolated-on-white-background-vector.jpg",
+      "tipo": "desafioDoMes"
+    },
+    {
+      "id": "546",
+      "titulo": "Nome da Ideia",
+      "problema": "Perda de tempo no processo de conferência de lotes",
+      "solucao": "Sistema de checklist digital com QR Code",
+      "colaborador": "colab789",
+      "imagem": "https://static.vecteezy.com/system/resources/thumbnails/008/695/917/small_2x/no-image-available-icon-simple-two-colors-template-for-no-image-or-picture-coming-soon-and-placeholder-illustration-isolated-on-white-background-vector.jpg",
+      "tipo": "ideiaImplementada"
+    }
+  ]
+}

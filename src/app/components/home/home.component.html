@@ -1,12 +1,16 @@
-<div class="main-container container p-3 ">
+<div class="main-container container p-3">
   <div class="row g-4">
+
     <div class="col-lg-4 col-md-12">
-      <app-card></app-card>
+      @for (item of cards; track $index) {
+        <app-card [item]="item"></app-card>
+      }
     </div>
 
     <div class="col-lg-4 col-md-12 d-flex flex-column">
-      <app-card-horizontal></app-card-horizontal>
-      <app-card-horizontal></app-card-horizontal>
+      @for (item of cards; track $index) {
+        <app-card-horizontal [item]="item"></app-card-horizontal>
+      }
     </div>
 
     <div class="col-lg-4 col-md-12">

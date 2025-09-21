@@ -1,11 +1,20 @@
 .btn-outline-primary {
   border-color: var(--cor-destaque);
   color: var(--cor-destaque);
+  transition: all 0.3s;
 }
+
 .btn-outline-primary:hover {
   background-color: var(--cor-destaque);
   color: #fff;
 }
+
+/* Mantém o botão “ativo” após clique */
+.btn-outline-primary.liked {
+  background-color: var(--cor-destaque);
+  color: #fff;
+}
+
 
 .post {
   background-color: #f8f9fa;
@@ -21,3 +30,4 @@
 .card-post{
     border: 2.5px solid var(--cor-destaque);
 }
+

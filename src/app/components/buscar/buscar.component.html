@@ -1,0 +1,99 @@
+<div class="search-bar container mt-4">
+  <div class="row g-2 align-items-center">
+
+ <div class="search-bar container mt-4">
+  <form (ngSubmit)="aplicarFiltros()" class="row g-2 align-items-center">
+
+    <!-- Campo de busca -->
+    <div class="col-md-5">
+      <input 
+        type="text" 
+        class="form-control" 
+        placeholder="Buscar por nome, descrição, área..." 
+        [(ngModel)]="searchText"
+        name="searchText"
+      />
+    </div>
+
+    <!-- Filtro por tipo -->
+    <div class="col-md-3">
+      <select class="form-select" [(ngModel)]="searchType" name="searchType">
+        <option value="ideia">Ideias</option>
+        <option value="colaborador">Colaboradores</option>
+      </select>
+    </div>
+
+    <!-- Filtros adicionais (apenas para colaboradores) -->
+    <div class="col-md-2" *ngIf="searchType === 'colaborador'">
+      <select class="form-select" [(ngModel)]="filterArea" name="filterArea">
+        <option value="">Todas as áreas</option>
+        <option *ngFor="let area of areasUnicas" [value]="area">
+          {{ area }}
+        </option>
+      </select>
+    </div>
+
+    <div class="col-md-2" *ngIf="searchType === 'colaborador'">
+      <select class="form-select" [(ngModel)]="filterCargo" name="filterCargo">
+        <option value="">Todos os cargos</option>
+        <option *ngFor="let cargo of cargosUnicos" [value]="cargo">
+          {{ cargo }}
+        </option>
+      </select>
+    </div>
+
+    <!-- Botão de envio -->
+    <div class="col-md-12 mt-2 d-flex justify-content-end">
+      <button type="submit" class="btn btn-primary">
+        Buscar
+      </button>
+    </div>
+
+  </form>
+</div>
+
+<!-- Resultados -->
+<div class="results mt-4 container">
+
+  <div *ngIf="resultadosFiltrados.length === 0" class="text-center text-muted py-4">
+    <i class="bi bi-search fs-1 mb-3"></i>
+    <p>Nenhum {{ searchType === 'ideia' ? 'ideia' : 'colaborador' }} encontrado. Tente ajustar os filtros.</p>
+  </div>
+
+  <!-- Resultados de ideias -->
+  <div *ngIf="searchType === 'ideia'">
+    <div *ngFor="let ideia of resultadosFiltrados" class="idea-post mt-3 p-3 rounded border bg-light">
+      <div class="d-flex justify-content-between align-items-start">
+        <div class="flex-grow-1 me-3">
+          <h6 class="mb-2"><strong>{{ ideia.titulo || 'Sem título' }}</strong></h6>
+          <p class="mb-2">{{ ideia.descricao }}</p>
+          <!-- <small class="text-muted">
+            Por: {{ colaboradores.find(c => c.id === ideia.idColaborador)?.nome }} - 
+            {{ colaboradores.find(c => c.id === ideia.idColaborador)?.area }}
+          </small> -->
+        </div>
+
+        <!-- Interações (likes, shares, comments) podem ser adicionadas aqui -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Resultados de colaboradores -->
+  <div *ngIf="searchType === 'colaborador'">
+    <div *ngFor="let colab of resultadosFiltrados" class="colaborador-card mt-3 p-3 rounded border bg-white shadow-sm">
+      <div class="d-flex align-items-center gap-3">
+        <img *ngIf="colab.foto; else defaultIcon" [src]="colab.foto" alt="{{ colab.nome }}" class="rounded-circle" width="50" height="50"/>
+        <ng-template #defaultIcon>
+          <i class="bi bi-person-circle fs-3 text-muted"></i>
+        </ng-template>
+
+        <div class="flex-grow-1">
+          <h5 class="mb-1">{{ colab.nome }}</h5>
+          <small class="text-muted">{{ colab.area }} - {{ colab.cargo }}</small><br/>
+          <small class="text-muted">{{ colab.email }}</small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,41 @@
+@if (item.tipo === 'desafioDoMes') {
+  <div class="custom-card">
+    <div class="img-container">
+      <img [src]="item.imagem" alt="Desafio" />
+    </div>
+
+    <div class="content">
+      <h5 class="card-title">{{ item.titulo }}</h5>
+
+      <p>{{ item.descricao }}</p>
+
+      <ul>
+        @for (tarefa of item.itens; track $index) {
+          <li>{{ tarefa }}</li>
+        }
+      </ul>
+
+      <p class="mt-3">
+        <strong>Premiação:</strong><br />
+        
+      </p>
+    </div>
+  </div>
+}
+
+@else if (item.tipo === 'ideiaImplementada') {
+  <div class="custom-card">
+    <div class="img-container">
+      <img [src]="item.imagem" alt="Ideia Implementada" />
+    </div>
+
+    <div class="content">
+      <h5 class="card-title">{{ item.titulo }}</h5>
+
+      <p><strong>Problema:</strong> {{ item.problema }}</p>
+      <p><strong>Solução:</strong> {{ item.solucao }}</p>
+     <p><strong>Colaborador:</strong> {{ getNomeColaborador(item.colaborador) }}</p>
+
+    </div>
+  </div>
+}

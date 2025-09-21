@@ -1,0 +1,36 @@
+.ranking-container {
+  font-family: var(--fonte);
+  color: var(--cor-fonte);
+}
+
+.ranking-list {
+  width: 100%;
+  font-size: 1.3rem;
+}
+
+.ranking-item {
+  background-color: var(--cor-destaque);
+  color: white;
+  border-radius: 25px;
+  font-weight: 500;
+  padding: 3rem;
+}
+
+.destaque-icon {
+  color: var(--cor-destaque);
+}
+
+.destaque-text p {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+.side-text {
+  padding: 1rem;
+  max-width: 400px;
+  align-items: center;
+  top: 0rem;
+  margin-left: 0;
+}
+.left-panel {
+  border-right: solid 2px var(--cor-destaque);
+}

@@ -1,0 +1,41 @@
+<div class="ranking-container container mt-4">
+  <div class="row d-flex">
+    <div class="col-lg-9 left-panel">
+      <h4 class="mb-4 title-farmana fs-1">Ranking - Mês</h4>
+
+      <div class="ranking-list d-flex flex-column gap-3">
+        @for (item of colaborador; track $index) {
+          <div class="ranking-item d-flex align-items-center justify-content-between px-4 py-2">
+            <div><i class="bi bi-person-circle me-2"></i>{{item.nome}}</div>
+            <div>{{item.pontos}} Pontos </div>
+          </div>
+        }
+      </div>
+    </div>
+
+    <aside class="col-lg-3 right-panel ps-lg-4 mt-4 mt-lg-0 side-text">
+      <div class="text-center mb-3">
+        <i class="bi bi-star display-4 destaque-icon"></i>
+      </div>
+      <h6><strong>Como se tornar um destaque na plataforma de inovação</strong></h6>
+
+      <div class="destaque-text mt-3">
+        <p><strong>Envie ideias que fazem diferença</strong><br>
+          Proponha soluções reais para desafios do cotidiano<br>
+          Ideias claras e aplicáveis têm maior chance de ser implementadas
+        </p>
+
+        <p><strong>Participe ativamente das discussões</strong><br>
+          Comente e ajude a melhorar as ideias dos colegas<br>
+          Trocas construtivas são valorizadas pela equipe
+        </p>
+
+        <p><strong>Invista no seu crescimento</strong><br>
+          Participe dos treinamentos e eventos oferecidos<br>
+          Aplique o conhecimento adquirido no seu trabalho<br>
+          Compartilhe aprendizados com a equipe
+        </p>
+      </div>
+    </aside>
+  </div>
+</div>

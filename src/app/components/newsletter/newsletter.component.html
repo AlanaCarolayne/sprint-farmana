@@ -1,0 +1,29 @@
+<div class="newsletter-container container mt-4 ">
+  <div class="row">
+    @if (colaboradorDestaque) {
+
+    <div class="col-lg-3 left-panel text-center">
+      <h2 class="title-farmana">Colaborador destaque</h2>
+      <div class="card-colaborador">
+        <div class="card-colaborador-img">
+          <img [src]="colaboradorDestaque.foto" alt="Colaborador" />
+        </div>
+        <h4 class="title-farmana">
+          <strong>Parabéns, {{ colaboradorDestaque.nome }}!</strong>
+        </h4>
+        <p >Sua dedicação à inovação fez a diferença!</p>
+        <p>
+          <strong>Cargo e Área:</strong>
+          {{ colaboradorDestaque.cargo }} - {{ colaboradorDestaque.area }}
+        </p>
+      </div>
+    </div>
+    }
+
+    <div class="col-lg-9 right-panel d-flex flex-column gap-4">
+      @for (item of noticia; track $index) {
+      <app-newsletter-box [item]="item" />
+      }
+    </div>
+  </div>
+</div>

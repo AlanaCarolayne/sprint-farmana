@@ -1,0 +1,27 @@
+.training-container {
+  font-family: var(--fonte);
+  color: var(--cor-fonte);
+}
+
+.training-card {
+  background-color: var(--cor-destaque, #d6e8ff);
+  border: none;
+  border-radius: 15px;
+  min-height: 220px;
+}
+
+.training-card img {
+  width: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.training-card h5 {
+  color: var(--cor-destaque);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: var(--cor-destaque);
+  border-radius: 50%;
+}
