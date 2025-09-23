@@ -19,9 +19,10 @@ export class RankingComponent {
   ngOnInit(): void {
     this.list();
   }
-  list(): void {
-    this.colaboradorService
-      .list()
-      .subscribe((colaborador) => (this.colaborador = colaborador));
-  }
+ list(): void {
+  this.colaboradorService.list().subscribe((colaborador) => {
+    this.colaborador = colaborador.sort((a, b) => +b.pontos - +a.pontos);
+  });
+}
+
 }

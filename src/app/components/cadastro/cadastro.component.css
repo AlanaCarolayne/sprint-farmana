@@ -1,15 +1,4 @@
-:root {
-  --fonte: "Raleway", sans-serif;
-  --cor-fonte: #000000;
-  --cor-fonte-destaque: #00358E;
-  --cor-fundo: #D9D9D9;
-  --cor-destaque: #00358E8A;
-}
 
-body {
-  font-family: var(--fonte);
-  background-color: var(--cor-fundo);
-}
 .label{
       font-size: 1.3rem;
       font-weight: 500;
@@ -69,26 +58,53 @@ h2 {
   font-weight: bold;
   color: var(--cor-fonte-destaque);
 }
+/* Responsividade tablets */
 @media (max-width: 992px) {
-  .ranking-item {
+  .login-box {
+    padding: 2rem;
+    max-width: 350px;
+  }
+
+  .button-login {
+    font-size: 1.2rem;
+    padding: 0.5rem 2.5rem;
+  }
+
+  .label {
+    font-size: 1.1rem;
+  }
+}
+
+/* Responsividade celulares */
+@media (max-width: 576px) {
+  .login-container {
+    padding: 1rem;
+  }
+
+  .login-box {
+    padding: 1.5rem;
+    max-width: 100%;
+  }
+
+  .button-login {
+    font-size: 1.1rem;
+    padding: 0.5rem 2rem;
+  }
+
+  .custom-input {
     font-size: 1rem;
-    padding: 0.8rem 1rem;
-    border-radius: 20px;
-  }
-
-  .destaque-icon {
-    font-size: 1.5rem;
-    margin-right: 0.5rem;
-  }
-
-  .side-text {
     padding: 0.5rem;
   }
 
-  .left-panel {
-    border-right: none;
-    border-bottom: 2px solid var(--cor-destaque);
-    padding-bottom: 0.5rem;
-    margin-bottom: 1rem;
+  .label {
+    font-size: 1rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  a {
+    font-size: 1rem;
   }
 }

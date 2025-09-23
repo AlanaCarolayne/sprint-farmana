@@ -11,34 +11,38 @@
 
   <div class="row justify-content-center">
     <div class="col-10 col-md-6 col-lg-4 login-box">
-      <form>
+      <form [formGroup]="loginForm" (ngSubmit)="entrar()">
+        <div class="mb-3 text-center">
+          <label for="nome" class="form-label label">Insira seu nome:</label>
+          <input
+            type="text"
+            class="form-control text-center custom-input"
+            formControlName="nome"
+            placeholder="Digite seu nome"
+          />
+        </div>
+
         <div class="mb-3 text-center">
           <label for="email" class="form-label label">Insira seu e-mail:</label>
           <input
             type="email"
             class="form-control text-center custom-input"
-            id="email"
+            formControlName="email"
             placeholder="Digite seu e-mail"
           />
         </div>
 
-        <div class="mb-3 text-center">
-          <label for="senha" class="form-label label">Insira sua senha:</label>
-          <input
-            type="password"
-            class="form-control text-center custom-input"
-            id="senha"
-            placeholder="Digite sua senha"
-          />
-        </div>
-
         <div class="text-center">
-          <a href="#">Esqueci minha senha</a>
+          <a href="cadastro">Ainda não está na plataforma? Se Cadastre!</a>
         </div>
 
         <div class="mb-3 mt-3 text-center">
-          <button class="button-login">Entrar</button>
+          <button class="button-login" type="submit" [disabled]="loading">
+            <a href="home" class="text-light">   {{ loading ? 'Entrando...' : 'Entrar' }}</a>
+          </button>
         </div>
+
+        
       </form>
     </div>
   </div>

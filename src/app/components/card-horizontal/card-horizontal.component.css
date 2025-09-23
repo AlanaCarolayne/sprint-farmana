@@ -3,7 +3,7 @@
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  max-width: 800px;
+  width: 33rem;
   height: auto;
   margin: 1rem 0;
   display: flex;
@@ -15,10 +15,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2.5rem .9rem;
+  padding: 4rem .9rem;
 }
 .custom-card img {
-  width: 120px;
+  max-width: 120px;
   height: 120px;
   border-radius: 50%;
   object-fit: cover;
@@ -40,17 +40,62 @@
   line-height: 1.5;
   margin-bottom: 0;
 }
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .custom-card {
     flex-direction: column;
     text-align: center;
+    width: 90%;
+    margin: 1rem auto;
   }
+
   .custom-card .img-container {
-    flex: none;
     width: 100%;
-    padding: 2rem;
+    padding: 2.5rem 0;
   }
+
+  .custom-card img {
+    width: 100px;
+    height: 100px;
+  }
+
   .custom-card .content {
-    padding: 1.5rem;
+    padding: 1.5rem 1.2rem;
+  }
+
+  .card-title {
+    font-size: 1.25rem;
+  }
+
+  .custom-card p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Responsividade para smartphones */
+@media (max-width: 576px) {
+  .custom-card {
+    width: 95%;
+    margin: 1rem auto;
+  }
+
+  .custom-card .img-container {
+    padding: 2rem 0;
+  }
+
+  .custom-card img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .custom-card .content {
+    padding: 1rem 1rem;
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+  }
+
+  .custom-card p {
+    font-size: 0.9rem;
   }
 }

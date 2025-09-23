@@ -1,30 +1,103 @@
-
+/* Navbar base */
 .navbar {
   font-family: var(--fonte);
   border-bottom: solid 2px var(--cor-destaque);
+  padding: 0.5rem 1rem;
 }
+
 .navbar-brand h2 {
   color: var(--cor-fonte-destaque);
   font-weight: 700;
+  font-size: 1.8rem;
+  margin: 0;
 }
-.navbar-brand{
-  display: flex;
-align-items: center;
-justify-content: center;
-}
-.nav-link {
-  color: var(--cor-fonte) ;
-  font-weight: 600;
-  font-size: 1.3rem;
-  margin-inline: 0.5rem;
-}
-.nav-link:hover {
-  color: var(--cor-fonte-destaque) ;
-}
-.header-icon {
-  margin-inline: 0.2rem;
-  color: var(--cor-fonte-destaque);
-  font-size: 1.6rem;
-  
 
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.navbar-brand img {
+  max-height: 60px;
+  width: auto;
+}
+
+/* Links da navbar */
+.nav-link {
+  color: var(--cor-fonte);
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-inline: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.nav-link:hover {
+  color: var(--cor-fonte-destaque);
+}
+
+.header-icon {
+  color: var(--cor-fonte-destaque);
+  font-size: 1.4rem;
+}
+
+/* Navbar toggler (menu mobile) */
+.navbar-toggler {
+  border-color:  #9facf5;
+  background-color: #b6c1fd;;
+}
+.navbar-toggler-icon{
+  color: var(--cor-fonte-destaque);
+
+}
+/* Responsividade tablets */
+@media (max-width: 992px) {
+  .navbar-brand h2 {
+    font-size: 1.5rem;
+  }
+
+  .nav-link {
+    font-size: 1.1rem;
+  }
+
+  .header-icon {
+    font-size: 1.2rem;
+  }
+}
+
+/* Responsividade smartphones */
+@media (max-width: 576px) {
+  .navbar-brand {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+  }
+
+  .navbar-brand img {
+    max-height: 50px;
+  }
+
+  .navbar-brand h2 {
+    font-size: 1.3rem;
+  }
+
+  .nav-link {
+    font-size: 1rem;
+    justify-content: flex-start;
+    padding: 0.5rem 0;
+  }
+
+  .header-icon {
+    font-size: 1.1rem;
+    
+
+  }
+
+  .navbar-collapse {
+    background-color: var(--bg-dark, #1a1a1a);
+    padding: 1rem;
+    border-radius: 0 0 12px 12px;
+  }
 }

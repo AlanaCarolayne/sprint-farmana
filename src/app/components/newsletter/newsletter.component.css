@@ -63,3 +63,36 @@
   max-width: 100px;
   border-radius: 50%;
 }
+/* Responsividade */
+@media (max-width: 992px) {
+  .newsletter-container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .left-panel {
+    border-right: none;
+    border-bottom: 2px solid var(--cor-destaque);
+    padding-bottom: 1rem;
+  }
+
+  .right-panel {
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .card-colaborador {
+    max-width: 100%;
+    margin: 1rem auto;
+  }
+
+  .card-colaborador-img img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .newsletter-box img {
+    max-width: 80px;
+  }
+}

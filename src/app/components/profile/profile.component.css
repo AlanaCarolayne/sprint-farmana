@@ -1,37 +1,184 @@
 .profile-container {
-  font-family: var(--fonte);
-  color: var(--cor-fonte);
+  padding: 2rem;
+  min-height: 100vh;
+  border-radius: 16px;
+  position: relative;
+}
+
+.profile-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
 }
 
 .left-panel {
-  border-right: 2px solid var(--cor-destaque);
-  padding-right: 1rem;
+  border-right: 3px solid var(--cor-destaque, #1303a3);
+  padding-right: 2rem;
 }
 
 .profile-icon {
   font-size: 5rem;
-  color: var(--cor-destaque);
+  color: var(--cor-destaque, #1303a3);
+  font-family: var(--fonte-destaque, "Arial Black", sans-serif);
+  text-shadow: 0 2px 8px rgba(19, 3, 163, 0.2);
+  transition: all 0.25s ease;
+  display: block;
+  margin: 0 auto 1.5rem;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.profile-icon:hover,
+.profile-icon:focus {
+  color: var(--cor-fonte-destaque, #00358e);
+  text-shadow: 0 4px 12px rgba(19, 3, 163, 0.3);
 }
 
 .additional-info p {
-  margin: 0.3rem 0;
-  font-size: 0.95rem;
+  margin: 0.75rem 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--cor-fonte-destaque, #00358e);
+  font-weight: 500;
+  font-family: var(--fonte, sans-serif);
+  transition: color 0.2s ease;
+  border-left: 3px solid rgba(19, 3, 163, 0.2);
+  padding-left: 1rem;
+  background: rgba(207, 214, 253, 0.3);
+  border-radius: 0 8px 8px 0;
+  padding: 0.5rem 1rem;
 }
 
+.additional-info p:hover {
+  color: var(--cor-fonte, #000000);
+  background: rgba(19, 3, 163, 0.08);
+  transform: translateX(4px);
+}
+
+/* Painel direito - Simétrico, com gradiente complementar */
 .right-panel {
   padding-left: 2rem;
+
+  border-radius: 0 16px 16px 0;
+  margin-left: 1.5rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.medal-icon {
-  font-size: 2rem;
-  color: var(--cor-destaque);
-}
-
-.idea-post {
-  border: 2px solid var(--cor-destaque);
+.idea-post, .training-card {
+  border: 2px solid var(--cor-destaque, #1303a3);
   background-color: #fff;
+  border-radius: 16px; /* Arredondado maior para suavidade */
+  padding: 1.75rem;
+  margin-bottom: 1.5rem;
+
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
 }
 
-.idea-post i {
-  color: var(--cor-destaque);
+.idea-post::before, .training-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--cor-destaque, #1303a3);
+}
+
+.idea-post:hover, .training-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 12px 32px rgba(19, 3, 163, 0.15);
+  border-color: var(--cor-fonte-destaque, #00358e);
+}
+.training-card-img {
+  width: 12rem;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.training-card-info h5 {
+  color: var(--cor-fonte-destaque, #00358e);
+}
+
+.training-card-info p {
+  font-size: 1rem;
+}
+
+.training-card-info small {
+  font-size: 0.9rem;
+}
+
+.training-card-info button {
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+/* Responsividade para tablets */
+@media (max-width: 992px) {
+  .profile-container {
+    flex-direction: column;
+    padding: 1.5rem 1rem;
+    gap: 1.5rem;
+  }
+
+  .left-panel,
+  .right-panel {
+    padding: 1.5rem;
+    margin: 0;
+    
+    border-right: none;
+   
+    background: rgba(207, 214, 253, 0.4);
+  }
+
+  .right-panel {
+    border-top: 2px solid var(--cor-fonte-destaque, #00358e);
+  }
+
+  .profile-icon {
+    font-size: 4rem;
+  }
+
+  .idea-post, .training-card {
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+    border-radius: 12px;
+  }
+
+  .additional-info p {
+    font-size: 0.95rem;
+    text-align: center;
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+  }
+}
+
+/* Responsividade para celulares */
+@media (max-width: 576px) {
+  .profile-container {
+    padding: 1rem 0.5rem;
+  }
+
+  .profile-icon {
+    font-size: 3.5rem;
+  }
+
+  .left-panel,
+  .right-panel {
+    padding: 1rem;
+  }
+
+  .idea-post, .training-card {
+    padding: 1rem;
+  }
+
+  .training-card-img {
+    max-width: 100%;
+    margin: 0 auto 1rem;
+  }
 }

@@ -1,27 +1,43 @@
 .training-container {
-  font-family: var(--fonte);
-  color: var(--cor-fonte);
+  max-width: 60rem;
+}
+
+.section-title {
+  font-weight: 600;
+  color: #00358e; 
+  border-left: 4px solid #00358e;
+  padding-left: 10px;
 }
 
 .training-card {
-  background-color: var(--cor-destaque, #d6e8ff);
   border: none;
-  border-radius: 15px;
-  min-height: 220px;
+  border-radius: 1rem;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.training-card img {
+.training-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.training-img {
   width: 250px;
+  height: 200px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 0.8rem;
 }
 
-.training-card h5 {
-  color: var(--cor-destaque);
+.training-info p {
+  line-height: 1.4;
 }
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-color: var(--cor-destaque);
-  border-radius: 50%;
+.btn-outline-primary, .icon-carrosel {
+    border-color: var(--cor-destaque);
+    color: var(--cor-destaque);
+}
+.btn-outline-primary:hover {
+    background-color: var(--cor-destaque);
+    color: #fff;
 }

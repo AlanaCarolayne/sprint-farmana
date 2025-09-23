@@ -1,78 +1,84 @@
 <div class="container mt-4 training-container">
-  <h5 class="mb-4">
+  <h3 class="mb-4 section-title title-farmana">
     <i class="bi bi-check-square me-2"></i> Eventos nesse mês
-  </h5>
+  </h3>
 
-
-  <div id="carouselTraining" class="carousel slide mb-5" data-bs-ride="carousel">
+  <div
+    id="carouselTraining"
+    class="carousel slide mb-5"
+    data-bs-ride="carousel"
+  >
     <div class="carousel-inner">
+      @for (item of treinamentos; track $index) {
 
       <div class="carousel-item active">
-        <div class="card training-card d-flex flex-row align-items-center p-3">
-          <img src="https://via.placeholder.com/250x200" class="img-fluid rounded me-4" alt="Evento">
-          <div>
-            <h5><strong>Inovação na Prática</strong></h5>
-            <p>Com metodologias ágeis e cases reais da empresa, <br>
-              este treinamento é ideal para colaboradores que querem <br>
-              contribuir ativamente com a cultura de inovação.
+        <div class="card training-card d-flex flex-row align-items-center p-4">
+          <img
+            src="{{ item.imagem }}"
+            class="img-fluid rounded training-img me-4"
+            alt="Evento"
+          />
+          <div class="training-info">
+            <h5 class="fw-bold mb-2">{{ item.titulo }}</h5>
+            <p class="text-muted mb-3">{{ item.descricao }}</p>
+            <p class="mb-2 small">
+              <i class="bi bi-calendar-event me-2 text-primary"></i
+              >{{ item.dataHora }}<br />
+              <i class="bi bi-geo-alt me-2 text-danger"></i>{{ item.local }}
             </p>
-            <p>
-              <i class="bi bi-calendar-event me-2"></i> 15/out - 14h às 17h<br>
-              <i class="bi bi-geo-alt me-2"></i> Auditório Central
-            </p>
-            <button class="btn btn-outline-primary mt-2">Confirmar sua presença</button>
+            <button
+              class="btn mt-2 shadow-sm"
+              [ngClass]="
+                item.confirmado ? 'btn-outline-success' : 'btn-outline-primary'
+              "
+              (click)="confirmarPresenca(item)"
+            >
+              {{ item.confirmado ? "Confirmado" : "Confirmar presença" }}
+            </button>
           </div>
         </div>
       </div>
+      }
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselTraining"
+        data-bs-slide="prev"
+      >
+        <i class="bi bi-chevron-left fs-1 icon-carrosel"></i>
+      </button>
 
-      <div class="carousel-item">
-        <div class="card training-card d-flex flex-row align-items-center p-3">
-          <img src="https://via.placeholder.com/250x200" class="img-fluid rounded me-4" alt="Evento">
-          <div>
-            <h5><strong>Inovação na Prática</strong></h5>
-            <p>Com metodologias ágeis e cases reais da empresa, <br>
-              este treinamento é ideal para colaboradores que querem <br>
-              contribuir ativamente com a cultura de inovação.
-            </p>
-            <p>
-              <i class="bi bi-calendar-event me-2"></i> 15/out - 14h às 17h<br>
-              <i class="bi bi-geo-alt me-2"></i> Auditório Central
-            </p>
-            <button class="btn btn-outline-primary mt-2">Confirmar sua presença</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="carousel-item">
-        <div class="card training-card d-flex flex-row align-items-center p-3">
-          <img src="https://via.placeholder.com/250x200" class="img-fluid rounded me-4" alt="Evento">
-          <div>
-            <h5><strong>Inovação na Prática</strong></h5>
-            <p>Com metodologias ágeis e cases reais da empresa, <br>
-              este treinamento é ideal para colaboradores que querem <br>
-              contribuir ativamente com a cultura de inovação.
-            </p>
-            <p>
-              <i class="bi bi-calendar-event me-2"></i> 15/out - 14h às 17h<br>
-              <i class="bi bi-geo-alt me-2"></i> Auditório Central
-            </p>
-            <button class="btn btn-outline-primary mt-2">Confirmar sua presença</button>
-          </div>
-        </div>
-      </div>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselTraining"
+        data-bs-slide="next"
+      >
+        <i class="bi bi-chevron-right fs-1 icon-carrosel"></i>
+      </button>
     </div>
 
+    <h3 class="mt-5 section-title title-farmana">
+      <i class="bi bi-plus-square me-2"></i> Próximos eventos
+    </h3>
 
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselTraining" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselTraining" data-bs-slide="next">
-      <span class="carousel-control-next-icon"></span>
-    </button>
+    @for (item of cards; track $index) { @if(item.tipo === 'treinamento'){
+
+    <div class="card training-card d-flex flex-row align-items-center p-4 mb-4 mt-4">
+      <img
+        src="{{ item.imagem }}"
+        class="img-fluid rounded training-img me-4"
+        alt="Evento"
+      />
+      <div class="training-info">
+        <h5 class="fw-bold mb-2">{{ item.titulo }}</h5>
+        <p class="text-muted mb-3">{{ item.descricao }}</p>
+        <p class="mb-2 small">
+          <i class="bi bi-calendar-event me-2 text-primary"></i
+          >{{ item.dataHora }}<br />
+        </p>
+      </div>
+    </div>
+    } }
   </div>
-
-
-  <h5>
-    <i class="bi bi-plus-square me-2"></i> Próximos eventos
-  </h5>
 </div>

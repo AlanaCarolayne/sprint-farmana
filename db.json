@@ -1,107 +1,206 @@
 {
   "card": [
     {
-      "id": "abc",
-      "titulo": "Teste-treinamento",
-      "descricao": "lorem ipsum",
-      "imagem": "https://static.vecteezy.com/system/resources/thumbnails/008/695/917/small_2x/no-image-available-icon-simple-two-colors-template-for-no-image-or-picture-coming-soon-and-placeholder-illustration-isolated-on-white-background-vector.jpg",
-      "dataHora": "20/09/2025",
+      "id": "card01",
+      "titulo": "Lançamento do Laboratório de Inovação",
+      "descricao": "Novo espaço em Itapevi dedicado a projetos de P&D em biotecnologia e medicamentos de alta complexidade.",
+      "imagem": "https://ictq.com.br/images/Eurofarma-traz-para-o-Brasil-analgesico-de-longa-duracao.jpg",
+      "dataHora": "10/09/2025",
+      "tipo": "horizontal"
+    },
+    {
+      "id": "card02",
+      "titulo": "Treinamento em Inteligência Artificial",
+      "descricao": "Capacitação para equipes de TI e P&D aplicarem IA em pesquisa clínica e automação de processos.",
+      "imagem": "https://abimed.org.br/wp-content/uploads/2024/07/Imagens-site_Conecta_Julho_Abimed6.jpg",
+      "dataHora": "12/09/2025",
       "tipo": "treinamento"
     },
     {
-      "id": "ab",
-      "titulo": "Teste-vertical",
-      "descricao": "lorem ipsum",
-      "imagem": "https://static.vecteezy.com/system/resources/thumbnails/008/695/917/small_2x/no-image-available-icon-simple-two-colors-template-for-no-image-or-picture-coming-soon-and-placeholder-illustration-isolated-on-white-background-vector.jpg",
-      "dataHora": "20/09/2025",
+      "id": "card03",
+      "titulo": "Nova Vertical de Sustentabilidade",
+      "descricao": "Área focada em projetos de economia circular, energia renovável e redução de impacto ambiental.",
+      "imagem": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6Oxf8CX1PIO37vNuEwRHizpZ_LIOGjO1g6Q&s",
+      "dataHora": "15/09/2025",
       "tipo": "vertical"
     },
     {
-      "id": "a",
-      "titulo": "Teste-horizontal",
-      "descricao": "lorem ipsum",
-      "imagem": "https://static.vecteezy.com/system/resources/thumbnails/008/695/917/small_2x/no-image-available-icon-simple-two-colors-template-for-no-image-or-picture-coming-soon-and-placeholder-illustration-isolated-on-white-background-vector.jpg",
-      "dataHora": "20/09/2025",
+      "id": "card04",
+      "titulo": "Parceria com Startups de Biotecnologia",
+      "descricao": "A Eurofarma firma acordo estratégico com startups de biotecnologia para acelerar o desenvolvimento de novas terapias e medicamentos de alta complexidade.",
+      "imagem": "https://terramagna.com.br/wp-content/uploads/2022/05/cientista-manipulando-planta-biotecnologia.png",
+      "dataHora": "18/09/2025",
       "tipo": "horizontal"
     }
   ],
   "criaIdeia": [
     {
       "id": "ideia1",
-      "titulo": "Sistema de Reuso de Água",
-      "descricao": "Proposta para instalar um sistema de captação e reuso de água da chuva na fábrica, visando redução de custos e sustentabilidade.",
-      "imagem": "https://images.unsplash.com/photo-1502303756788-9c6a119f1e83",
-      "areaAfetada": "Infraestrutura",
-      "tipo": "Sustentabilidade",
-      "dataHora": "20/09/2025",
-      "recursos": "Cisternas, filtros, encanamento",
+      "titulo": "Sistema de Monitoramento em Tempo Real",
+      "descricao": "Implantar sensores IoT para acompanhar temperatura e umidade em câmaras frias, garantindo maior segurança na conservação de vacinas.",
+      "dataHora": "05/09/2025",
+      "areaAfetada": "Qualidade e Logística",
+      "tipo": "Automação",
+      "recursos": "Sensores IoT, software de monitoramento",
       "idColaborador": "colab789",
-      "likes": 32,
-      "comments": 37,
-      "share": 5
+      "likes": 47,
+      "comments": 12,
+      "share": 7
     },
     {
       "id": "ideia2",
-      "titulo": "App Interno de Feedback",
-      "descricao": "Aplicativo mobile para coleta de feedback em tempo real entre colaboradores e gestores, visando melhoria contínua do ambiente de trabalho.",
-      "imagem": "https://images.unsplash.com/photo-1547658718-1f1ab7b8b70e",
+      "titulo": "Plataforma de Telemedicina para Funcionários",
+      "descricao": "Criação de uma plataforma interna para atendimentos médicos online, oferecendo consultas rápidas para colaboradores e familiares.",
+      "imagem": "https://eurofarma.com.br/storage/media/4379/ke0RsZEy44WfJP7MGl0mYQl1pnwvYDrA7e6XXJCK.jpeg",
       "areaAfetada": "Recursos Humanos",
       "tipo": "Inovação",
-      "dataHora": "20/09/2025",
-      "recursos": "Equipe de desenvolvimento, servidor interno",
+      "dataHora": "08/09/2025",
+      "recursos": "Equipe de TI, infraestrutura em nuvem, parcerias com clínicas",
       "idColaborador": "colab123",
-      "likes": 263,
-      "comments": 39,
-      "share": 5
+      "likes": 185,
+      "comments": 42,
+      "share": 23
     }
   ],
   "colaboradores": [
     {
       "id": "colab123",
       "nome": "Ana Silva",
-      "departamento": "Infraestrutura",
-      "email": "ana.silva@empresa.com",
-      "foto": "https://randomuser.me/api/portraits/women/1.jpg",
+      "departamento": "Recursos Humanos",
+      "email": "ana.silva@eurofarma.com.br",
+      "foto": "https://randomuser.me/api/portraits/women/44.jpg",
       "tempo": 5,
-      "area": "Gestão de Projetos",
-      "cargo": "Engenheira",
+      "area": "Gestão de Pessoas",
+      "cargo": "Coordenadora de RH",
       "unidade": "São Paulo",
-      "pontos": "100"
+      "pontos": "320"
     },
     {
       "id": "colab789",
       "nome": "Carla Mendes",
-      "departamento": "TI",
-      "email": "carla.mendes@empresa.com",
-      "foto": "https://randomuser.me/api/portraits/women/3.jpg",
+      "departamento": "Tecnologia da Informação",
+      "email": "carla.mendes@eurofarma.com.br",
+      "foto": "https://randomuser.me/api/portraits/women/68.jpg",
       "tempo": 4,
       "area": "Desenvolvimento de Sistemas",
-      "cargo": "Desenvolvedora",
+      "cargo": "Analista de Sistemas Sênior",
       "unidade": "Belo Horizonte",
-      "pontos": "10"
+      "pontos": "210"
+    },
+    {
+      "id": "colab456",
+      "nome": "Bruno Oliveira",
+      "departamento": "Pesquisa e Desenvolvimento",
+      "email": "bruno.oliveira@eurofarma.com.br",
+      "foto": "https://randomuser.me/api/portraits/men/21.jpg",
+      "tempo": 6,
+      "area": "Biotecnologia",
+      "cargo": "Pesquisador",
+      "unidade": "Itapevi",
+      "pontos": "280"
+    },
+    {
+      "id": "colab567",
+      "nome": "Camila Souza",
+      "departamento": "Marketing",
+      "email": "camila.souza@eurofarma.com.br",
+      "foto": "https://randomuser.me/api/portraits/women/65.jpg",
+      "tempo": 3,
+      "area": "Comunicação e Branding",
+      "cargo": "Analista de Marketing",
+      "unidade": "São Paulo",
+      "pontos": "150"
+    },
+    {
+      "id": "colab678",
+      "nome": "Daniel Pereira",
+      "departamento": "Qualidade",
+      "email": "daniel.pereira@eurofarma.com.br",
+      "foto": "https://randomuser.me/api/portraits/men/34.jpg",
+      "tempo": 7,
+      "area": "Controle de Qualidade",
+      "cargo": "Supervisor de Qualidade",
+      "unidade": "Belo Horizonte",
+      "pontos": "310"
+    },
+    {
+      "id": "colab890",
+      "nome": "Fernanda Lima",
+      "departamento": "Operações",
+      "email": "fernanda.lima@eurofarma.com.br",
+      "foto": "https://randomuser.me/api/portraits/women/12.jpg",
+      "tempo": 5,
+      "area": "Logística e Supply Chain",
+      "cargo": "Gerente de Operações",
+      "unidade": "Itapevi",
+      "pontos": "270"
+    },
+    {
+      "id": "colab901",
+      "nome": "Gustavo Martins",
+      "departamento": "Finanças",
+      "email": "gustavo.martins@eurofarma.com.br",
+      "foto": "https://randomuser.me/api/portraits/men/47.jpg",
+      "tempo": 4,
+      "area": "Controladoria",
+      "cargo": "Analista Financeiro",
+      "unidade": "São Paulo",
+      "pontos": "190"
     }
   ],
   "newsletter": [
     {
-      "id": "aaa",
-      "titulo": "Sustentabilidade na Prática",
-      "descricao": "Incentivar colaboradores a propor soluções práticas para:",
+      "id": "news01",
+      "titulo": "Desafio do Mês: Redução de Plásticos",
+      "descricao": "Convocamos todos os colaboradores para sugerir ações que reduzam o uso de plásticos descartáveis na cadeia produtiva.",
       "itens": [
-        "Reduzir desperdícios (papel, energia, água, insumos)",
-        "Otimizar processos com menor impacto ambiental",
-        "Promover hábitos sustentáveis no dia a dia"
+        "Substituição de embalagens por materiais biodegradáveis",
+        "Criação de política interna para uso de copos reutilizáveis",
+        "Campanha de conscientização para fornecedores"
       ],
-      "imagem": "https://static.vecteezy.com/system/resources/thumbnails/008/695/917/small_2x/no-image-available-icon-simple-two-colors-template-for-no-image-or-picture-coming-soon-and-placeholder-illustration-isolated-on-white-background-vector.jpg",
+      "imagem": "https://ambiental.sc/wp-content/uploads/2023/12/reducao-do-consumo-de-plastico.jpg",
       "tipo": "desafioDoMes"
     },
     {
-      "id": "546",
-      "titulo": "Nome da Ideia",
-      "problema": "Perda de tempo no processo de conferência de lotes",
-      "solucao": "Sistema de checklist digital com QR Code",
+      "id": "news02",
+      "titulo": "Ideia Implementada: Checklist Digital de Lotes",
+      "problema": "Perda de tempo e risco de erro no processo manual de conferência de lotes de medicamentos.",
+      "solucao": "Sistema de checklist digital com QR Code para rastreabilidade imediata.",
       "colaborador": "colab789",
-      "imagem": "https://static.vecteezy.com/system/resources/thumbnails/008/695/917/small_2x/no-image-available-icon-simple-two-colors-template-for-no-image-or-picture-coming-soon-and-placeholder-illustration-isolated-on-white-background-vector.jpg",
+      "imagem": "https://mv.com.br/storage/blog/1751152022070862c898c32f699.png",
       "tipo": "ideiaImplementada"
+    }
+  ],
+  "treinamentos": [
+    {
+      "id": "tr1",
+      "titulo": "Boas Práticas em Segurança da Informação",
+      "descricao": "Capacitação para conscientizar colaboradores sobre riscos de cibersegurança, phishing e como proteger dados da empresa e de clientes.",
+      "dataHora": "25/nov - 10h às 12h",
+      "local": "Sala de Conferências 1",
+      "imagem": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBq4ci70N5jEPJBXqRtzvB8CjRyFK2CFd08w&s",
+      "confirmado": false,
+      "idColaborador": ""
+    },
+    {
+      "id": "tr2",
+      "titulo": "Comunicação Eficaz em Equipes Ágeis",
+      "descricao": "Dicas e técnicas para melhorar a comunicação e colaboração em times que utilizam metodologias ágeis.",
+      "dataHora": "05/nov - 10h às 12h",
+      "local": "Auditório Central",
+      "imagem": "https://www.bv.com.br/documents/d/bv-inspira/metodologia-agil-jpg",
+      "confirmado": false,
+      "idColaborador": ""
+    },
+    {
+      "id": "tr3",
+      "titulo": "Inovação e Desenvolvimento de Novos Fármacos",
+      "descricao": "Apresentação das etapas de pesquisa e desenvolvimento de novos medicamentos, incluindo tendências de biotecnologia e desafios regulatórios.",
+      "dataHora": "24/nov - 09h às 11h",
+      "local": "Centro de Inovação Eurofarma – São Paulo",
+      "imagem": "https://bioquimicabrasil.com/wp-content/uploads/2020/11/m-v.png",
+      "confirmado": true,
+      "idColaborador": "colab567"
     }
   ]
 }

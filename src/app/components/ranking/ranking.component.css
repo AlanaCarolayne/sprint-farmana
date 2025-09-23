@@ -34,3 +34,28 @@
 .left-panel {
   border-right: solid 2px var(--cor-destaque);
 }
+/* Responsividade para celulares */
+@media (max-width: 992px) {
+  .ranking-item {
+    font-size: 1rem;
+    padding: 0.8rem 1rem;
+    border-radius: 20px;
+  }
+
+  .destaque-icon {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .side-text {
+    max-width: 100%;
+    padding: 0.5rem;
+  }
+
+  .left-panel {
+    border-right: none;
+    border-bottom: 2px solid var(--cor-destaque);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+  }
+}

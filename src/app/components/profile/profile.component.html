@@ -4,79 +4,107 @@
   </div>
 </div>
 
-<div *ngIf="!loading && colaboradorPerfil" class="profile-container container mt-4">
-  <div class="row">
-    <!-- Painel esquerdo -->
-    <div class="col-lg-3 left-panel">
-      <div class="text-center">
-        <img 
-          *ngIf="colaboradorPerfil.foto; else defaultIcon"
-          [src]="colaboradorPerfil.foto" 
-          alt="{{ colaboradorPerfil.nome }}" 
-          class="profile-img rounded-circle mb-2"
-        />
-        <ng-template #defaultIcon>
-          <i class="bi bi-person-circle profile-icon" style="font-size: 6rem;"></i>
-        </ng-template>
+<div *ngIf="!loading && colaboradorPerfil" class="profile-container d-flex">
 
-        <h4 class="mt-2">{{ colaboradorPerfil.nome }}</h4>
-        <p class="text-muted">{{ colaboradorPerfil.email }}</p>
-      </div>
+  <div class="left-panel flex-shrink-0">
+    <ng-container *ngIf="colaboradorPerfil.foto; else defaultIcon">
+      <img
+        [src]="colaboradorPerfil.foto"
+        alt="{{ colaboradorPerfil.nome }}"
+        class="profile-icon rounded-circle mb-3"
+      />
+    </ng-container>
+    <ng-template #defaultIcon>
+      <i class="bi bi-person-circle profile-icon"></i>
+    </ng-template>
 
-      <div class="additional-info mt-4">
-        <p><strong>Informações adicionais:</strong></p>
-        <p>Área: {{ colaboradorPerfil.area }}</p>
-        <p>Cargo: {{ colaboradorPerfil.cargo }}</p>
-        <p>Tempo de empresa: {{ colaboradorPerfil.tempo }} anos</p>
-        <p>Unidade: {{ colaboradorPerfil.unidade }}</p>
-      </div>
+    <h4 class="mt-2 text-center title-farmana">{{ colaboradorPerfil.nome }}</h4>
+    <p class="text-muted text-center">{{ colaboradorPerfil.email }}</p>
+
+    <div class="additional-info mt-4">
+      <p><strong>Área:</strong> {{ colaboradorPerfil.area }}</p>
+      <p><strong>Cargo:</strong> {{ colaboradorPerfil.cargo }}</p>
+      <p>
+        <strong>Tempo de empresa:</strong> {{ colaboradorPerfil.tempo }} anos
+      </p>
+      <p><strong>Unidade:</strong> {{ colaboradorPerfil.unidade }}</p>
     </div>
+  </div>
 
-    <!-- Painel direito -->
-    <div class="col-lg-9 right-panel">
-      <div class="medals mb-4">
-        <h5>Medalhas</h5>
-        <div class="d-flex gap-4 mt-3 flex-wrap">
-          <div class="text-center">
-            <i class="bi bi-award medal-icon"></i>
-            <p>Comentarista</p>
-          </div>
-          <div class="text-center">
-            <i class="bi bi-award medal-icon"></i>
-            <p>Popular</p>
-          </div>
-          <div class="text-center">
-            <i class="bi bi-award medal-icon"></i>
-            <p>Primeiros Passos</p>
-          </div>
-          <div class="text-center">
-            <i class="bi bi-award medal-icon"></i>
-            <p>Top Mensal</p>
-          </div>
+  
+  <div class="right-panel flex-grow-1">
+    <div class="mt-4">
+      <h5 class="title-farmana fs-3 mx-2 my-3">
+        <i class="bi bi-lightbulb"></i> Ideias do colaborador
+      </h5>
+      <div
+        *ngFor="let ideia of getIdeiasDoColaborador(colaboradorPerfil.id)"
+        class="idea-post mt-3"
+      >
+        <h6>{{ ideia.titulo }}</h6>
+        <p>{{ ideia.descricao }}</p>
+        <div class="text-end text-muted small">
+          <span
+            ><i class="bi bi-hand-thumbs-up"></i> {{ ideia.likes || 0 }}</span
+          >
+          <span class="ms-3"
+            ><i class="bi bi-arrow-repeat"></i> {{ ideia.share || 0 }}</span
+          >
+          <span class="ms-3"
+            ><i class="bi bi-chat-left-text"></i>
+            {{ ideia.comments || 0 }}</span
+          >
         </div>
       </div>
 
-      <hr />
+      <p
+        *ngIf="getIdeiasDoColaborador(colaboradorPerfil.id).length === 0"
+        class="text-muted mt-3"
+      >
+        Nenhuma ideia cadastrada.
+      </p>
+    </div>
 
-      <div class="ideas-section mt-4">
-        <h5>Ideias</h5>
+    <div class="mt-5">
+  <h5 class="title-farmana fs-3 mx-2 my-3">
+    <i class="bi bi-check-square me-2"></i> Treinamentos de interesse
+  </h5>
 
-        <div 
-          class="idea-post mt-3 p-3 rounded border"
-          *ngFor="let ideia of getIdeiasDoColaborador(colaboradorPerfil.id)"
+  <div *ngIf="getTreinamentosDoColaborador(colaboradorPerfil.id).length > 0">
+    <div
+      *ngFor="let treinamento of getTreinamentosDoColaborador(colaboradorPerfil.id)"
+      class="training-card mb-3 p-3 d-flex align-items-center shadow-sm"
+    >
+      <img
+        [src]="treinamento.imagem"
+        alt="Treinamento"
+        class="rounded training-card-img me-3"
+      />
+      <div class="training-card-info">
+        <h5 class="fw-bold mb-1">{{ treinamento.titulo }}</h5>
+        <p class="text-muted mb-1">{{ treinamento.descricao }}</p>
+        <small class="text-secondary mb-1 d-block">
+          <i class="bi bi-calendar-event me-1 text-primary"></i>{{ treinamento.dataHora }}
+          &nbsp;|&nbsp;
+          <i class="bi bi-geo-alt me-1 text-danger"></i>{{ treinamento.local }}
+        </small>
+        <button
+          class="btn mt-2"
+          [ngClass]="
+            treinamento.confirmado ? 'btn-outline-success' : 'btn-outline-primary'
+          "
+          disabled
         >
-          <p>{{ ideia.descricao }}</p>
-          <!-- <div class="d-flex justify-content-end gap-4 mt-2">
-            <span><i class="bi bi-hand-thumbs-up"></i> {{ ideia.likes || 0 }}</span>
-            <span><i class="bi bi-arrow-repeat"></i> {{ ideia.shares || 0 }}</span>
-            <span><i class="bi bi-chat-left-text"></i> {{ ideia.comments || 0 }}</span>
-          </div> -->
-        </div>
-
-        <p *ngIf="getIdeiasDoColaborador(colaboradorPerfil.id).length === 0" class="text-muted mt-3">
-          Nenhuma ideia cadastrada.
-        </p>
+          {{ treinamento.confirmado ? 'Confirmado' : 'Confirmar presença' }}
+        </button>
       </div>
     </div>
+  </div>
+
+  <p *ngIf="getTreinamentosDoColaborador(colaboradorPerfil.id).length === 0" class="text-muted">
+    Nenhum treinamento confirmado.
+  </p>
+</div>
+
   </div>
 </div>

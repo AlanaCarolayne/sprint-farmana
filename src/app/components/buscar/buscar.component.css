@@ -1,0 +1,206 @@
+.search-bar {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.search-bar .form-control,
+.search-bar .form-select {
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+  font-family: var(--fonte);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.search-bar .form-control:focus,
+.search-bar .form-select:focus {
+  border-color: var(--cor-fonte-destaque);
+  box-shadow: 0 0 5px rgba(0, 53, 142, 0.3);
+}
+.btn-outline-primary {
+    border-color: var(--cor-destaque);
+    color: var(--cor-destaque);
+}
+.btn-outline-primary:hover {
+    background-color: var(--cor-destaque);
+    color: #fff;
+}
+.search-bar button.btn-primary {
+  background-color: var(--cor-fonte-destaque);
+  border: none;
+  border-radius: 8px;
+  padding: 8px 20px;
+  font-family: var(--fonte-destaque);
+  transition: background-color 0.3s;
+}
+
+.search-bar button.btn-primary:hover {
+  background-color: var(--cor-destaque);
+}
+
+/* Idea posts */
+.idea-post {
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  background-color: #ffffff;
+  transition: transform 0.2s, box-shadow 0.2s;
+  font-family: var(--fonte);
+}
+
+.idea-post:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.idea-post h6 {
+  font-family: var(--fonte-destaque);
+  color: var(--cor-fonte-destaque);
+  font-size: 1.1rem;
+}
+
+.idea-post p {
+  color: #495057;
+  font-size: 0.95rem;
+}
+
+.idea-post small {
+  color: #6c757d;
+}
+
+/* Colaborador cards */
+.colaborador-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  background-color: #ffffff;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  font-family: var(--fonte);
+}
+
+.colaborador-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.colaborador-card img {
+  border: 2px solid var(--cor-fonte-destaque);
+}
+
+.colaborador-card h5 {
+  margin: 0;
+  font-weight: 600;
+  font-family: var(--fonte-destaque);
+  color: var(--cor-fonte-destaque);
+}
+
+.colaborador-card small {
+  color: #6c757d;
+  font-size: 0.85rem;
+}
+
+/* Modal geral */
+.modal-content {
+  border-radius: 12px;
+  font-family: var(--fonte);
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.modal-content:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Cabeçalho do modal */
+.modal-header {
+  background-color: var(--cor-fundo);
+  border-bottom: 1px solid #d1d1d1;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.modal-title {
+  font-family: var(--fonte-destaque);
+  color: var(--cor-fonte-destaque);
+  font-size: 1.3rem;
+}
+
+.btn-close {
+  filter: brightness(0.6);
+  transition: filter 0.2s;
+}
+
+.btn-close:hover {
+  filter: brightness(1);
+}
+
+/* Corpo do modal */
+.modal-body {
+  font-family: var(--fonte);
+  color: #495057;
+  line-height: 1.5;
+}
+
+.modal-body h5 {
+  font-family: var(--fonte-destaque);
+  color: var(--cor-fonte-destaque);
+  margin-bottom: 10px;
+}
+
+.modal-body p {
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+.modal-body img {
+  border-radius: 8px;
+  margin-top: 10px;
+  max-width: 100%;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Rodapé do modal */
+.modal-footer {
+  border-top: 1px solid #d1d1d1;
+}
+
+.modal-footer .btn-secondary {
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  border: none;
+  font-family: var(--fonte-destaque);
+  color: var(--cor-fonte-destaque);
+  transition: background-color 0.3s;
+}
+
+.modal-footer .btn-secondary:hover {
+  background-color: var(--cor-fundo);
+}
+
+/* Responsividade */
+@media (max-width: 576px) {
+  .modal-dialog {
+    max-width: 90%;
+    margin: 1rem auto;
+  }
+
+  .modal-title {
+    font-size: 1.1rem;
+  }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .search-bar .col-md-5,
+  .search-bar .col-md-3,
+  .search-bar .col-md-2 {
+    margin-bottom: 10px;
+  }
+}

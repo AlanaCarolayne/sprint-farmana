@@ -1,6 +1,6 @@
 <div class="container side">
-  <h2 class="text-center title-farmana"><i class="bi bi-journal-check"></i> Treinamentos</h2>
+  <a href="treinamentos" class="text-center title-farmana side-title"><i class="bi bi-journal-check"></i> Treinamentos</a>
 @for (item of cards; track $index) {
-        <app-card-treinamento [item]="item"></app-card-treinamento>
+        <a href="treinamentos" class="card-side"><app-card-treinamento [item]="item"></app-card-treinamento></a>
       }
 </div>

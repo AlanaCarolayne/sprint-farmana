@@ -5,10 +5,24 @@
 
       <div class="ranking-list d-flex flex-column gap-3">
         @for (item of colaborador; track $index) {
-          <div class="ranking-item d-flex align-items-center justify-content-between px-4 py-2">
-            <div><i class="bi bi-person-circle me-2"></i>{{item.nome}}</div>
-            <div>{{item.pontos}} Pontos </div>
+        <div
+          class="ranking-item d-flex align-items-center justify-content-between px-4 py-2"
+        >
+    
+          <div class="d-flex align-items-start justify-content-center" >
+            <img
+              [src]="item.foto"
+              alt="Imagem de perfil"
+              class="rounded-circle"
+              style="width: 40px; height: 40px; object-fit: cover"
+            />
+            <div class="ms-3">
+              <div>{{ item.nome }}</div>
+            </div>
           </div>
+
+          <div>{{ item.pontos }} Pontos</div>
+        </div>
         }
       </div>
     </div>
@@ -17,22 +31,27 @@
       <div class="text-center mb-3">
         <i class="bi bi-star display-4 destaque-icon"></i>
       </div>
-      <h6><strong>Como se tornar um destaque na plataforma de inovação</strong></h6>
+      <h6>
+        <strong>Como se tornar um destaque na plataforma de inovação</strong>
+      </h6>
 
       <div class="destaque-text mt-3">
-        <p><strong>Envie ideias que fazem diferença</strong><br>
-          Proponha soluções reais para desafios do cotidiano<br>
+        <p>
+          <strong>Envie ideias que fazem diferença</strong><br />
+          Proponha soluções reais para desafios do cotidiano<br />
           Ideias claras e aplicáveis têm maior chance de ser implementadas
         </p>
 
-        <p><strong>Participe ativamente das discussões</strong><br>
-          Comente e ajude a melhorar as ideias dos colegas<br>
+        <p>
+          <strong>Participe ativamente das discussões</strong><br />
+          Comente e ajude a melhorar as ideias dos colegas<br />
           Trocas construtivas são valorizadas pela equipe
         </p>
 
-        <p><strong>Invista no seu crescimento</strong><br>
-          Participe dos treinamentos e eventos oferecidos<br>
-          Aplique o conhecimento adquirido no seu trabalho<br>
+        <p>
+          <strong>Invista no seu crescimento</strong><br />
+          Participe dos treinamentos e eventos oferecidos<br />
+          Aplique o conhecimento adquirido no seu trabalho<br />
           Compartilhe aprendizados com a equipe
         </p>
       </div>

@@ -1,52 +1,94 @@
 <div class="container my-4">
-  <div class="d-flex justify-content-end mb-3">
-    <button class="btn btn-outline-primary d-flex align-items-center gap-2">
-      <i class="bi bi-funnel"></i> Filtros
-    </button>
-  </div>
-
-  <div *ngFor="let ideia of ideias" class="post p-3 mb-4 card-post">
-    <h5 class="fw-bold mb-2 fs-3">
-      <i class="bi bi-person-circle me-2 title-farmana"></i>
-      {{ ideia.idColaborador }} - {{ ideia.areaAfetada }}
-    </h5>
-
-    <small class="text-muted">Publicado em: {{ ideia.dataHora }}</small>
-    <h4 class="fw-semibold mb-2">{{ ideia.titulo }}</h4>
-
-    <p class="mb-3 p-2">
-      {{ ideia.descricao }}
-    </p>
-
-    <div *ngIf="ideia.imagem" class="mb-3">
-      <img
-        [src]="ideia.imagem"
-        alt="Imagem da ideia"
-        class="img-fluid rounded"
-      />
+  <!-- Barra de Filtros -->
+  <div class="row g-3 mb-4">
+    <h2 class="title-farmana">Filtros</h2>
+    <div class="col-md-4">
+      <select
+        class="form-select"
+        [(ngModel)]="filtroArea"
+        (change)="aplicarFiltros()"
+      >
+        <option value="">Todas as Áreas</option>
+        <option *ngFor="let area of areasUnicas" [value]="area">
+          {{ area }}
+        </option>
+      </select>
     </div>
 
-    <div class="d-flex gap-4 align-items-center justify-content-end mt-3">
-  <button 
-    class="btn btn-outline-primary px-4" 
-    [ngClass]="{'liked': isLiked(ideia.id)}" 
-    (click)="toggleLike(ideia.id)">
-    <i class="bi bi-hand-thumbs-up"></i> {{ ideia.likes || 0 }} 
-  </button>
+    <div class="col-md-4">
+      <select
+        class="form-select"
+        [(ngModel)]="filtroTipo"
+        (change)="aplicarFiltros()"
+      >
+        <option value="">Todos os Tipos</option>
+        <option *ngFor="let tipo of tiposUnicos" [value]="tipo">
+          {{ tipo }}
+        </option>
+      </select>
+    </div>
+  </div>
 
-  <button 
-    class="btn btn-outline-primary px-4" 
-    [ngClass]="{'liked': isShared(ideia.id)}" 
-    (click)="toggleShare(ideia.id)">
-    <i class="bi bi-chat"></i> {{ ideia.share || 0 }}  
-  </button>
+<!-- Lista de ideias filtradas -->
+<div *ngFor="let ideia of ideiasFiltradas" class="post p-3 mb-4 card-post">
 
-  <button 
-    class="btn btn-outline-primary px-4" 
-    [ngClass]="{'liked': isCommented(ideia.id)}" 
-    (click)="toggleComment(ideia.id)">
-    <i class="bi bi-repeat"></i> {{ ideia.comments || 0 }}
-  </button>
+  <!-- Bloco com foto + nome/cargo -->
+  <div class="d-flex align-items-center mb-2">
+    <img 
+      [src]="getColaborador(ideia.idColaborador)?.foto" 
+      alt="Imagem de perfil"
+      class="rounded-circle me-2"
+      style="width:50px; height:50px; object-fit:cover;"
+    />
+
+    <h5 class="fw-bold fs-3 mb-0">
+      {{ getColaborador(ideia.idColaborador)?.nome || "Desconhecido" }} -
+      {{ getColaborador(ideia.idColaborador)?.cargo || "—" }}
+    </h5>
+  </div>
+
+  <small class="text-muted">Publicado em: {{ ideia.dataHora }}</small>
+  <h4 class="fw-semibold mb-2">{{ ideia.titulo }}</h4>
+  <h6>
+    Área envolvida: {{ ideia.areaAfetada }} - Tipo de ideia: {{ ideia.tipo }}
+  </h6>
+  <p class="mb-3 p-2">
+    {{ ideia.descricao }}
+  </p>
+
+  <div *ngIf="ideia.imagem" class="mb-3">
+    <img
+      [src]="ideia.imagem"
+      alt="Imagem da ideia"
+      class="img-fluid rounded"
+    />
+  </div>
+  <div class="d-flex gap-4 align-items-center justify-content-end mt-3">
+      <button
+        class="btn btn-outline-primary px-4"
+        [ngClass]="{ liked: isLiked(ideia.id) }"
+        (click)="toggleLike(ideia.id)"
+      >
+        <i class="bi bi-hand-thumbs-up"></i> {{ ideia.likes || 0 }}
+      </button>
+
+      <button
+        class="btn btn-outline-primary px-4"
+        [ngClass]="{ liked: isShared(ideia.id) }"
+        (click)="toggleShare(ideia.id)"
+      >
+        <i class="bi bi-chat"></i> {{ ideia.share || 0 }}
+      </button>
+
+      <button
+        class="btn btn-outline-primary px-4"
+        [ngClass]="{ liked: isCommented(ideia.id) }"
+        (click)="toggleComment(ideia.id)"
+      >
+        <i class="bi bi-repeat"></i> {{ ideia.comments || 0 }}
+      </button>
+    </div>
+
 </div>
 
 </div>

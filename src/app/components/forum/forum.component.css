@@ -1,3 +1,4 @@
+/* Botões de interação (mantidos conforme seu estilo) */
 .btn-outline-primary {
   border-color: var(--cor-destaque);
   color: var(--cor-destaque);
@@ -9,25 +10,87 @@
   color: #fff;
 }
 
-/* Mantém o botão “ativo” após clique */
 .btn-outline-primary.liked {
   background-color: var(--cor-destaque);
   color: #fff;
 }
 
-
+/* Cards de ideias */
 .post {
   background-color: #f8f9fa;
-  border: 2px solid var(--cor-destaque);
+  border: 1px solid var(--cor-destaque);
   border-radius: 1rem;
+  padding: 20px;
+  font-family: var(--fonte);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
+.post:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
 
 .post h5 {
   font-family: var(--fonte-destaque);
   color: var(--cor-fonte-destaque);
 }
-.card-post{
-    border: 2.5px solid var(--cor-destaque);
+
+
+.card-post {
+ 
+  border-radius: 1rem;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #ffffff;
 }
 
+
+.card-post .d-flex.align-items-center {
+  margin-bottom: 10px;
+}
+
+.card-post img.rounded-circle {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+
+}
+
+
+.card-post h4 {
+  font-family: var(--fonte-destaque);
+  color: var(--cor-fonte-destaque);
+  margin: 10px 0 5px 0;
+  font-size: 1.25rem;
+}
+
+
+.card-post h6 {
+  color: #495057;
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+/* Descrição */
+.card-post p {
+  color: #495057;
+  font-size: 0.95rem;
+  padding: 10px;
+  background-color: #f1f3fa;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* Imagem da ideia */
+.card-post div.mb-3 img {
+  max-height: 250px; 
+  width: 100%;       
+  object-fit: cover; 
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s;
+}
+
+.card-post div.mb-3 img:hover {
+  transform: scale(1.02);
+}
