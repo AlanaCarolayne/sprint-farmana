@@ -1,59 +1,45 @@
-# SprintFarmana
+#  **Farmana**  
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.11.
+O **Farmana** é uma aplicação web desenvolvida para **estimular a inovação interna** na **Eurofarma**, permitindo que colaboradores compartilhem ideias, interajam entre si e acompanhem o impacto de iniciativas internas.  
+A plataforma fortalece a cultura de **colaboração** e **melhoria contínua**, transformando boas propostas em oportunidades reais de crescimento.
 
-## Development server
+---
 
-To start a local development server, run:
+## 🚀 **Tecnologias Utilizadas**
 
-```bash
-ng serve
-```
+- **Angular 17+** – Framework front-end principal  
+- **TypeScript** – Linguagem base para o desenvolvimento em Angular  
+- **Bootstrap 5** – Estilização e responsividade do layout  
+- **JSON-Server** – API fake para simular um backend durante o desenvolvimento  
+- **Node.js / npm** – Gerenciamento de dependências e scripts  
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+## ⚙️ **Principais Funcionalidades**
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## ⚙️ Funcionalidades
+- **📋 Cadastro e listagem de ideias:** Colaboradores podem registrar novas propostas de inovação.  
+- **💡 Detalhes de cada ideia:** Exibição de título, descrição, área afetada e recursos necessários.  
+- **👍 Interações em tempo real:** Possibilidade de curtir, comentar e compartilhar ideias.  
+- **👩‍💼 Perfil do colaborador:** Mostra informações do colaborador.  
+- **📰 Tela de Novidades:** Centraliza as últimas atualizações da área de inovação.  
+- **🎓 Tela de Treinamentos:** Espaço para divulgação de cursos e capacitações.  
+- **🏆 Sistema de Ranking:** Destaque para colaboradores mais ativos e engajados
+- **📱 Layout responsivo:** Interface adaptada para desktop, tablet e dispositivos móveis.  
+---
 
-```bash
-ng generate component component-name
-```
+## 👥 **Equipe**
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+| Nome | RM |
+|------|----|
+| Alana Carolayne Moreira Siqueira | 552261 |
+| Ana Júlia Henriques Neves        | 98263  |
 
-```bash
-ng generate --help
-```
+---
 
-## Building
+## 📜 **Licença**
 
-To build the project run:
+Este projeto é de **uso acadêmico e interno**, desenvolvido como parte do **Challenge FIAP 2025** em parceria com a **Eurofarma**.  
+A distribuição é **restrita**, seguindo as políticas da Eurofarma e da FIAP.
 
-```bash
-ng build
-```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
